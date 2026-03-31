@@ -1,106 +1,282 @@
-# Claude Code Python Porting Workspace
+# 🚀 Claude Code Python Port (Research Workspace)
 
-> The primary `src/` tree in this repository is now dedicated to **Python porting work**. The March 31, 2026 Claude Code source exposure is part of the project's background, but the tracked repository is now centered on Python source rather than the exposed TypeScript snapshot.
+> ⚡ **Experimental Python re-implementation workspace inspired by the Claude Code architecture exposure (March 31, 2026).**
+
+This repository is a **Python-first research workspace** focused on understanding and rebuilding agent-style coding systems inspired by the architecture that surfaced during the **Claude Code source exposure event**.
+
+The repository **no longer tracks the exposed snapshot**.  
+Instead, it focuses on **clean Python reimplementation work, architectural exploration, and tooling research**.
+
+⭐ **If you find this interesting, consider starring the repo to support the project.**
 
 ---
 
-## Porting Status
+# 🔥 Why This Repository Exists
 
-The main source tree is now Python-first.
+On **March 31, 2026**, a widely discussed event exposed internal architecture related to **Claude Code**, an AI coding tool.
 
-- `src/` contains the active Python porting workspace
-- `tests/` verifies the current Python workspace
-- the exposed snapshot is no longer part of the tracked repository state
+While studying the architecture, several interesting patterns emerged:
 
-The current Python workspace is not yet a complete one-to-one replacement for the original system, but the primary implementation surface is now Python.
+- agent command orchestration
+- tool invocation pipelines
+- task-based workflow coordination
+- query-driven reasoning loops
 
-## Why this rewrite exists
+Rather than keeping the exposed code snapshot, this repository now focuses on:
 
-I originally studied the exposed codebase to understand its harness, tool wiring, and agent workflow. After spending more time with the legal and ethical questions—and after reading the essay linked below—I did not want the exposed snapshot itself to remain the main tracked source tree.
+✔ **clean Python reimplementation research**  
+✔ **architecture exploration**  
+✔ **AI coding tool workflow design**  
+✔ **agent tooling experiments**
 
-This repository now focuses on Python porting work instead.
+---
 
-## Repository Layout
+# 🧠 Project Goals
 
-```text
-.
-├── src/                                # Python porting workspace
-│   ├── __init__.py
-│   ├── commands.py
-│   ├── main.py
-│   ├── models.py
-│   ├── port_manifest.py
-│   ├── query_engine.py
-│   ├── task.py
-│   └── tools.py
-├── tests/                              # Python verification
-├── assets/omx/                         # OmX workflow screenshots
-├── 2026-03-09-is-legal-the-same-as-legitimate-ai-reimplementation-and-the-erosion-of-copyleft.md
-└── README.md
+This repository explores how modern **AI coding agents** might be structured internally.
+
+Areas currently being studied:
+
+- command orchestration
+- task pipelines
+- query execution loops
+- tool invocation frameworks
+- subsystem manifest generation
+- modular agent architecture
+
+The goal is **not to recreate the original system**, but to explore **ideas inspired by the architecture patterns observed during analysis**.
+
+---
+
+# 📂 Repository Structure
+
 ```
 
-## Python Workspace Overview
+.
+├── src/                                # Python porting workspace
+│   ├── **init**.py
+│   ├── commands.py                     # command metadata layer
+│   ├── main.py                         # CLI entrypoint
+│   ├── models.py                       # system dataclasses
+│   ├── port_manifest.py                # workspace manifest generator
+│   ├── query_engine.py                 # workspace analysis engine
+│   ├── task.py                         # task orchestration primitives
+│   └── tools.py                        # tool wiring layer
+│
+├── tests/                              # Python verification suite
+│
+├── assets/omx/                         # OmX workflow screenshots
+│
+└── README.md
 
-The new Python `src/` tree currently provides:
+````
 
-- **`port_manifest.py`** — summarizes the current Python workspace structure
-- **`models.py`** — dataclasses for subsystems, modules, and backlog state
-- **`commands.py`** — Python-side command port metadata
-- **`tools.py`** — Python-side tool port metadata
-- **`query_engine.py`** — renders a Python porting summary from the active workspace
-- **`main.py`** — a CLI entrypoint for manifest and summary output
+---
 
-## Quickstart
+# ⚙️ Python Workspace Overview
 
-Render the Python porting summary:
+The current Python workspace includes the following core components.
+
+### `port_manifest.py`
+
+Generates a structured summary of the current Python workspace including:
+
+- subsystems
+- modules
+- port progress
+- architecture overview
+
+---
+
+### `models.py`
+
+Defines internal system models using **Python dataclasses**.
+
+Includes representations for:
+
+- subsystems
+- modules
+- task states
+- port tracking structures
+
+---
+
+### `commands.py`
+
+Contains the **command metadata layer** used for describing agent commands and execution behavior.
+
+---
+
+### `tools.py`
+
+Defines tool wiring structures that allow the agent workspace to invoke external or internal functionality.
+
+---
+
+### `query_engine.py`
+
+Provides the **analysis layer** that renders summaries of the Python port workspace.
+
+Used for:
+
+- system inspection
+- architecture summaries
+- subsystem listing
+
+---
+
+### `main.py`
+
+CLI entrypoint that exposes repository utilities.
+
+---
+
+# 🚀 Quickstart
+
+Clone the repository:
+
+```bash
+git clone https://github.com/apreezofficial/claude-code.git
+cd claude-code
+````
+
+---
+
+## Generate Python Port Summary
 
 ```bash
 python3 -m src.main summary
 ```
 
-Print the current Python workspace manifest:
+---
+
+## Print Workspace Manifest
 
 ```bash
 python3 -m src.main manifest
 ```
 
-List the current Python modules:
+---
+
+## List Current Subsystems
 
 ```bash
 python3 -m src.main subsystems --limit 16
 ```
 
-Run verification:
+---
+
+## Run Verification Tests
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-## Related Essay
+---
 
-- [*Is legal the same as legitimate: AI reimplementation and the erosion of copyleft*](https://writings.hongminhee.org/2026/03/legal-vs-legitimate/)
+# 🧩 Research Focus
 
-The essay is dated **March 9, 2026**, so it should be read as companion analysis that predates the **March 31, 2026** source exposure that motivated this rewrite direction.
+This project is currently exploring patterns used in **modern AI coding assistants**, including:
 
-## Built with `oh-my-codex`
+* agent command systems
+* tool execution loops
+* reasoning pipelines
+* modular coding agents
+* code generation workflows
 
-The restructuring and documentation work on this repository was AI-assisted and orchestrated with Yeachan Heo's [oh-my-codex (OmX)](https://github.com/Yeachan-Heo/oh-my-codex), layered on top of Codex.
+The repository acts as a **sandbox for experimenting with these architectures in Python**.
 
-- **`$team` mode:** used for coordinated parallel review and architectural feedback
-- **`$ralph` mode:** used for persistent execution, verification, and completion discipline
-- **Codex-driven workflow:** used to turn the main `src/` tree into a Python-first porting workspace
+---
+
+# 🧠 AI Workflow
+
+The repository restructuring process was assisted by **AI-driven development workflows**.
+
+Tools used include:
+
+* Codex
+* OmX (oh-my-codex)
+* structured multi-agent review pipelines
+
+---
+
+# 🧪 Built With OmX (oh-my-codex)
+
+This repository was partially orchestrated using **OmX**, a workflow system created by **Yeachan Heo**.
+
+Repository:
+[https://github.com/Yeachan-Heo/oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
+
+OmX enables:
+
+* parallel agent review
+* execution pipelines
+* multi-agent orchestration
+
+---
 
 ### OmX workflow screenshots
 
 ![OmX workflow screenshot 1](assets/omx/omx-readme-review-1.png)
 
-*Ralph/team orchestration view while the README and essay context were being reviewed in terminal panes.*
+*Ralph/team orchestration view during documentation review.*
+
+---
 
 ![OmX workflow screenshot 2](assets/omx/omx-readme-review-2.png)
 
-*Split-pane review and verification flow during the final README wording pass.*
+*Split-pane verification and review workflow.*
 
-## Ownership / Affiliation Disclaimer
+---
 
-- This repository does **not** claim ownership of the original Claude Code source material.
-- This repository is **not affiliated with, endorsed by, or maintained by Anthropic**.
+# 📚 Related Essay
+
+An earlier essay discussing legal and ethical questions around AI reimplementation can be found here:
+
+**Is legal the same as legitimate: AI reimplementation and the erosion of copyleft**
+
+[https://writings.hongminhee.org/2026/03/legal-vs-legitimate/](https://writings.hongminhee.org/2026/03/legal-vs-legitimate/)
+
+The essay was written **before the March 31, 2026 architecture exposure event**, but it discusses relevant philosophical questions.
+
+---
+
+# ⭐ Support The Project
+
+If you find this repository useful or interesting:
+
+⭐ Star the repository
+🍴 Fork it
+🧠 Share insights or improvements
+
+GitHub:
+
+[https://github.com/apreezofficial/claude-code](https://github.com/apreezofficial/claude-code)
+
+---
+
+# ⚠️ Disclaimer
+
+This repository:
+
+* **does not contain the exposed Claude Code snapshot**
+* **does not claim ownership of Anthropic intellectual property**
+* **is not affiliated with Anthropic**
+
+The project exists solely as a **Python research workspace exploring agent-style coding architectures**.
+
+---
+
+# 🧭 Future Roadmap
+
+Planned areas of exploration include:
+
+* agent planning loops
+* tool orchestration frameworks
+* code reasoning pipelines
+* autonomous coding agents
+* architecture visualizations
+
+---
+
+**Experimental AI architecture research in progress.**
